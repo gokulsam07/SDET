@@ -1,0 +1,25 @@
+class Solution {
+    public int numberOfSteps(int num) {
+        int count=0;
+        while(num>0){
+                 if(num%2==0){
+            num/=2;
+            count++;
+        }
+        else{
+            num-=1;
+            count++;
+        }
+        }
+       return count;
+        
+    }
+}
+
+//INput: num
+//Output: count
+//Logic: initialize count=0
+//1. Run a while loop till num>0
+//2. check if it div by 2, if yes do num/=2 and increment count
+//3. else reduce num by 1 and increment count 
+//return count

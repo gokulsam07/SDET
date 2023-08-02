@@ -1,0 +1,9 @@
+class Solution {
+    public boolean checkString(String s) {
+        return (s.contains("ba"))?false:true;
+    }
+}
+
+//Input: string
+//output: true or false
+//Logic if the given string contains ba return false, else true

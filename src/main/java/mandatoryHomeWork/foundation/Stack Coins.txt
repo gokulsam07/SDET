@@ -1,0 +1,23 @@
+
+
+class Solution {
+    public int arrangeCoins(int n) {
+        int count=0, i =1;
+        while(n>=i){
+            n=n-i;
+                count++;
+                i++;
+            }
+        
+        return count;
+    }
+}
+
+//Input: int 
+//Outupt: int - count of complete staircase
+//Logic:
+//Initialize i=1,count =0;
+// Run a while loop till n>=i (if it is less, it means we are in last row which is incomplete or completed last row with  zero)
+// Subtract i from n and store in n
+// Increment i and count by 1 
+//return count

@@ -1,0 +1,25 @@
+class Solution {
+    public int alternateDigitSum(int n) {
+       char[] c= String.valueOf(n).toCharArray();
+       int sum=0;
+       for(int i=0;i<c.length;i++){
+           int digit = Character.getNumericValue(c[i]);
+           if(i%2!=0){
+               sum=sum-digit;
+           }
+           else{
+                sum=sum+digit;
+
+           }
+       }return sum;
+    }
+}
+
+
+//Input: num
+//Output : sum (int)
+//Logic: initialize sum;
+//1. Convert the given num to string and to char []
+//2. Run a for loop, convert the char to inv using getNumericValue and store in digit
+//3. subtract the digit from sum when th index is odd else add digit to sum
+//4. return sum

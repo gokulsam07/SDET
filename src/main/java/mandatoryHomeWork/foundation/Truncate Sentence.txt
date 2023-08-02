@@ -1,0 +1,26 @@
+class Solution {
+    public String truncateSentence(String s, int k) {
+        String[] arr = s.split(" ");
+        String f = "";
+
+        for(int i=0; i<k;i++){
+            if(i == k-1){
+               f=f+arr[i]; 
+            }
+            else{
+                f=f+(arr[i]+" ");
+            }
+        }
+
+        return f;
+    }
+}
+
+//input: String 
+//output: String
+//logic : initialzie string " "
+//1. split ans store the sentence in string []
+//2. run a for loop till <k
+//3. if index == k-1, append the string 
+//4. else append string & " "
+//5. return string

@@ -1,0 +1,22 @@
+class Solution {
+    public String complexNumberMultiply(String num1, String num2) {
+    int n11 = Integer.parseInt(num1.substring(0, num1.indexOf('+')));
+    int n21 = Integer.parseInt(num2.substring(0, num2.indexOf('+')));
+    int n12 = Integer.parseInt(num1.substring(num1.indexOf('+') + 1, num1.length() - 1));
+    int n22 = Integer.parseInt(num2.substring(num2.indexOf('+') + 1, num2.length() - 1));
+
+    int real = n11 * n21 - n12 * n22;
+    int imaginary = n11 * n22 + n12 * n21;
+
+    return real + "+" + imaginary + "i";
+    }
+}
+
+
+//Input: Strings
+//Output: String
+//Logic
+//1. Extract number and imaginary part from both the strings and store in variables using parseInt method
+//2.n11*n21 - n12 * n22 will give real num (minus is for i2=-1)
+//3. n11 * n22 + n12 * n21 will give imaginary num
+//4. return real+ "+"+imaginary+"i"

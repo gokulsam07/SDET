@@ -1,0 +1,23 @@
+class Solution {
+    public String defangIPaddr(String address) {
+        String s="";
+        for(int i=0;i<address.length();i++){
+                if(address.charAt(i)!=46){
+                        s=s+(char)address.charAt(i);
+                }
+                else{
+                    s=s+"[.]";
+                }
+        }
+        return s;
+    }
+}
+
+//INput: String 
+//Output: String
+//Logic:
+//1. Initialize a string s ""
+//2. Run a loop till the size of given address
+//3. if char @ index is not ==46 <.> append the char to s
+//4. else append [.] to s
+//return s

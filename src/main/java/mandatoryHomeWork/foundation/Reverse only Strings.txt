@@ -1,0 +1,26 @@
+class Solution {
+    public String reverseOnlyLetters(String s) {
+        char[] fin = new char[s.length()];
+        int k=s.length()-1;
+        for(int i=0;i<s.length();i++){
+         char c = s.charAt(i);
+            if (Character.isLetter(c)) {
+                while (!Character.isLetter(s.charAt(k))) {
+                    k--;
+                }
+                fin[i] = s.charAt(k--);
+            } else {
+                fin[i] = c;
+            }
+        }
+        return String.valueOf(fin);
+    }
+}
+
+//Input: String 
+//Output: reversed string with non lettrs in same place
+//Logic
+//1. initialize a char of length==len of s & initialize the length of s to a var k
+//2. Run a for loop till the size of string
+//3. Check if the particular char at a position is a letter , if yes add it to char[]
+//4. If not add the char to char[]

@@ -1,0 +1,13 @@
+class Solution {
+    public boolean squareIsWhite(String s) {
+        if((s.charAt(0)+s.charAt(1))%2==0){
+            return false;
+        }return true;
+    }
+}
+
+
+//Input: coordinates 
+//outuput: boolean
+//Logic: check if charAt(0)+charAt(1)%2==0 is yes return false (black)
+//else return true

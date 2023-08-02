@@ -1,0 +1,23 @@
+class Solution {
+    public int distributeCandies(int[] candyType) {
+        Arrays.sort(candyType);
+      int n,i,c=1;
+		n=candyType.length/2;
+		for(i=0;i<candyType.length-1;i++){ 
+			if(candyType[i]!=candyType[i+1]) c++;
+		}
+		if(c<=n) return c;
+		else return n;
+    }
+}
+
+//Input: int[] of candy type
+//Output: max int candy she can eat
+//Logic
+//initialize n,i&c=1
+//Sort the given array
+//sest n = arrlen/2
+// Iterate a for loop till <length 
+//Check if an element and next element is not equal
+// increment c by 1
+//if c is less than n, return c else n

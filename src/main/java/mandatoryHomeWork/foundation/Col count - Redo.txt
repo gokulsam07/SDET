@@ -1,0 +1,18 @@
+class Solution {
+    public int titleToNumber(String ct) {
+      int sum=0, pow=0;
+      int n = ct.length();
+      for(int i =n-1;i>=0;i--){
+          int temp = ct.charAt(i)-64;
+          sum=sum+(int)Math.pow(26,pow++)*temp;
+      }
+      return sum;
+    }
+}
+
+//Input: String in CAPS
+//Output: Col num of the corresponding String
+//Logic:
+//1. Extract the Char one by one from last value
+//2. Store the char in a variable temp
+//3. Multiply the temp value with increasing power of 26 starting from 0 for iteration and store in sum
