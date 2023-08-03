@@ -1,0 +1,21 @@
+class Solution {
+    public int totalMoney(int n) {
+    int completeWeek = n/7;
+    int leftDays = n%7;
+    int runCountForLastwWeek =completeWeek+1;
+         int completeWeekMoneysum = (completeWeek * (2 * 28 + (completeWeek - 1) * 7)) / 2;
+        int leftDaysMoneySum = (leftDays * (2 * runCountForLastwWeek + (leftDays - 1) * 1)) / 2;
+        return (completeWeekMoneysum + leftDaysMoneySum);
+    }
+}  
+
+
+//Input: int 
+//Output: int - money
+//Logic: 
+//1. Calculate full week, completeWeek=n/7
+//2. Calculate leftDays =n%7
+//3. Calculate runCountForLastwWeek using 1+n/7
+//4. Full week follows an AP of 28, 35 with d 5.So, calculate sum of AP using (n * [2 * a + (n - 1) * d]) / 2
+//5. Caluclate the leftDays' money using (leftDays * (2 * runCountForLastwWeek + (leftDays - 1) * 1)) / 2
+//6. return sum  of full week and leftovrs 
