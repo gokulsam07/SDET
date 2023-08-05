@@ -1,0 +1,25 @@
+class Solution {
+    public int averageValue(int[] nums) {
+        int count=0;
+        int sum=0;
+        for(int i:nums){
+            if(i%3==0&&i%2==0){
+                sum=sum+i;
+                count++;
+            }
+        }
+        if(count>0){
+            return sum/count;
+        }
+        return count;
+    }
+}
+
+//Input: int[] 
+//Output: int
+//Logic
+//1. Run a for loop
+//2. Check if it is divisible by 3 and 2
+//3. if yes increment counter & add the value to sum
+//4. if count>0, return sum/count
+//5. return 0 in all other cases
