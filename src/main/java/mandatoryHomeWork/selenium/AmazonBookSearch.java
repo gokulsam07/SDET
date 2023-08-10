@@ -26,19 +26,20 @@ public class AmazonBookSearch {
 		Select opt = new Select(list);
 		opt.selectByVisibleText("Books");
 		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Atomic Habits", Keys.TAB, Keys.ENTER);
-		List<WebElement> title = driver.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));
-		System.out.println("--------------------------");
+		List<WebElement> title = driver.findElements(By.xpath("//span[contains(@class,'a-size-medium a-color-base')]"));
+		List<WebElement> sTitle = driver.findElements(By.xpath("//span[text()='Results']//following::img[@class='s-image']"));
+
 		for (WebElement webElement : title) {
 			System.out.println(webElement.getText());
 
 		}
-		System.out.println("--------------------------");
 
-
-
-		System.out.println("--------------------------");
-		WebElement first = title.get(1);
-		first.click();
+		for (WebElement webElement : sTitle) {
+			if(!webElement.getAttribute("alt").contains("Sponsored")){
+				webElement.click();
+				break;
+			}
+		}
 		Set<String> tab = driver.getWindowHandles();
 		ArrayList ls = new ArrayList(tab);
 		driver.switchTo().window(ls.get(1).toString());
