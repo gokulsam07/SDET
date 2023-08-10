@@ -1,0 +1,26 @@
+class Solution {
+    public boolean checkStraightLine(int[][] c) {
+        
+        int sx1 = c[1][0] - c[0][0];
+        int sy1 = c[1][1] - c[0][1];
+        
+        for (int i = 2; i < c.length; i++) {
+            int sx = c[i][0] - c[0][0];
+            int sy = c[i][1] - c[0][1];
+            
+            if (sx1 * sy != sy1 * sx) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
+//Input: int[]
+//Output: boolean
+//Logic
+//1. find numerator & denominator of first two point's slope
+//2. find the numerator & denominator of successive points w.r.t to point 1
+//3. Check if the cross product of all the slope of successive points equals the same w.r.t point 1 , if yes return true, else return false
