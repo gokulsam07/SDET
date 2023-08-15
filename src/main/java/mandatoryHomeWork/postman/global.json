@@ -1,0 +1,21 @@
+{
+	"id": "62bd4e3b-e1c7-49cd-85ba-280734beebfd",
+	"values": [
+		{
+			"key": "baseJIRA",
+			"value": "https://testjirafeb2023.atlassian.net",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "issueId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2023-08-15T08:12:39.766Z",
+	"_postman_exported_using": "Postman/10.17.1"
+}
