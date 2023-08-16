@@ -28,6 +28,10 @@ public class FormulaOne {
 		actions.moveToElement(results).build().perform();
 		WebElement standings = driver.findElement(By.xpath("//a[contains(@href,'driver-standings')]"));
 		standings.click();
+		WebElement frame1 = driver.findElement(By.xpath("//iframe[@title='SP Consent Message']"));
+		driver.switchTo().frame(frame1);
+		WebElement accept1 = driver.findElement(By.xpath("//button[@title='ACCEPT ALL']"));
+		accept1.click();
 		String name ="oscar-piastri";
 		WebElement xname = driver.findElement(By.xpath("(//a[contains(@href, '" + name + "')]/@href)[3]/ancestor::tr/td[2]"));
 		int pos = Integer.parseInt(xname.getText());
