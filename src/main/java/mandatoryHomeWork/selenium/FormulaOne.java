@@ -19,11 +19,15 @@ public class FormulaOne {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 		driver.navigate().to("https://www.formula1.com");
-		driver.findElement(By.xpath("//button[@id='truste-consent-button']")).click();
+		WebElement frame = driver.findElement(By.xpath("//iframe[@title='SP Consent Message']"));
+		driver.switchTo().frame(frame);
+		WebElement accept = driver.findElement(By.xpath("//button[@title='ACCEPT ALL']"));
+		accept.click();
 		WebElement results = driver.findElement(By.xpath("//span[normalize-space()='Results']"));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(results).build().perform();
-		driver.findElement(By.xpath("//a[contains(text(),'Driver Standings')]")).click();
+		WebElement standings = driver.findElement(By.xpath("//a[contains(@href,'driver-standings')]"));
+		standings.click();
 		String name ="oscar-piastri";
 		WebElement xname = driver.findElement(By.xpath("(//a[contains(@href, '" + name + "')]/@href)[3]/ancestor::tr/td[2]"));
 		int pos = Integer.parseInt(xname.getText());
