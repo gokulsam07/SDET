@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class FormulaOne {
 
-	
+
 	@Test
 	public void formulaTest() {
 		WebDriver driver = new ChromeDriver();
@@ -29,21 +29,23 @@ public class FormulaOne {
 		WebElement standings = driver.findElement(By.xpath("//a[contains(@href,'driver-standings')]"));
 		standings.click();
 		WebElement frame1 = driver.findElement(By.xpath("//iframe[@title='SP Consent Message']"));
-		driver.switchTo().frame(frame1);
-		WebElement accept1 = driver.findElement(By.xpath("//button[@title='ACCEPT ALL']"));
-		accept1.click();
+		if(frame1.isDisplayed()) {
+			driver.switchTo().frame(frame1);
+			WebElement accept1 = driver.findElement(By.xpath("//button[@title='ACCEPT ALL']"));
+			accept1.click();
+		}
 		String name ="oscar-piastri";
 		WebElement xname = driver.findElement(By.xpath("(//a[contains(@href, '" + name + "')]/@href)[3]/ancestor::tr/td[2]"));
 		int pos = Integer.parseInt(xname.getText());
-		
+
 		if(pos<10) {
 			System.out.println(name);
 		}
 		else {
 			System.out.println(name+" is out of 10 position by " +(pos-10));
-	
+
 		}
 		driver.close();
-		
+
 	}
 }
