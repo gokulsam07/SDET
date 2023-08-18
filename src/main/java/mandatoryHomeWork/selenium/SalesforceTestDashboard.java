@@ -41,6 +41,9 @@ public class SalesforceTestDashboard {
 		driver.switchTo().frame(frame);
 		driver.findElement(By.id("dashboardNameInput")).sendKeys("Salesforce Automation by Gokul");
 		driver.findElement(By.xpath("//button[normalize-space()='Create']")).click();
+		WebElement frame2 = driver.findElement(By.xpath("//div[@class='windowViewMode-normal oneContent active lafPageHost']//iframe[@title='dashboard']"));
+		driver.switchTo().frame(frame2);
+		driver.findElement(By.xpath("//button[normalize-space()='Done']")).click();
 		driver.quit();
 	}
 }
