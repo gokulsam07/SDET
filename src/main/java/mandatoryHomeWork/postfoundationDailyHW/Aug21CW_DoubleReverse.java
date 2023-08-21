@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.testng.Assert;
 
 
-public class Aug21CW {
+public class Aug21CW_DoubleReverse {
 	//Input : int
 	///Output : boolean
 	//Logic
