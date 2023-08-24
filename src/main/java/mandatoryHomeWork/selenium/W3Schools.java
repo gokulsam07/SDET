@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class W3Schools {
 
-	@Test
+	@Test  
 	public void w3schoolTest() {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
