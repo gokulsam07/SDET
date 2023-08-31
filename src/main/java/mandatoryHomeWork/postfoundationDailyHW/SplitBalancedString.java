@@ -1,4 +1,5 @@
-class Solution {
+package mandatoryHomeWork.postfoundationDailyHW;
+public class SplitBalancedString {
     public int balancedStringSplit(String s) {
         int count=0;
 int countR=0;

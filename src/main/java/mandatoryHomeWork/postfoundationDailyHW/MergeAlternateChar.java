@@ -1,4 +1,6 @@
-class Solution {
+package mandatoryHomeWork.postfoundationDailyHW;
+
+public class MergeAlternateChar {
     public String mergeAlternately(String word1, String word2) {
         String fin="";
         int len1 = word1.length();

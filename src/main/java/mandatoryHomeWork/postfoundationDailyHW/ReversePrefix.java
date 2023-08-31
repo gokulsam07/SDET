@@ -1,4 +1,5 @@
-class Solution {
+package mandatoryHomeWork.postfoundationDailyHW;
+public class ReversePrefix {
     public String reversePrefix(String word, char ch) {
 int j = word.indexOf(ch);
 
