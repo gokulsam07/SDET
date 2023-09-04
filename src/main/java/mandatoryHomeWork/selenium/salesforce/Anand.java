@@ -34,7 +34,7 @@ public class Anand {
 		driver.findElement(By.xpath("//button[text()='View All']")).click();
 	}
 
-	@Test
+	@Test(priority=1)
 	public void TC1() throws InterruptedException {
 		driver.findElement(By.xpath("//p[text()=\"Sales\"]")).click();
 		WebElement element = driver.findElement(By.xpath("//span[@class='slds-truncate'][normalize-space()='Opportunities']"));
@@ -58,7 +58,7 @@ public class Anand {
 	}
 
 
-	@Test
+	@Test(priority=2)
 	public void TC2() throws InterruptedException {
 		driver.findElement(By.xpath("//p[text()=\"Sales\"]")).click();
 		WebElement element = driver.findElement(By.xpath("//span[@class='slds-truncate'][normalize-space()='Opportunities']"));
@@ -75,7 +75,7 @@ public class Anand {
 	}
 
 
-	@Test
+	@Test(priority=3)
 	public void TC3() throws InterruptedException{
 		driver.findElement(By.xpath("//p[text()=\"Sales\"]")).click();
 		WebElement element = driver.findElement(By.xpath("//span[@class='slds-truncate'][normalize-space()='Opportunities']"));
@@ -93,7 +93,7 @@ public class Anand {
 		Assert.assertEquals(true, driver.findElement(By.xpath("//a[normalize-space()='Salesforce Automation by Anand']/ancestor::tr/td[5]/span/span")).getText().contains("Perception"));
 	}
 
-	@Test
+	@Test(priority=4)
 	public void TC4() throws InterruptedException {
 		driver.findElement(By.xpath("//p[text()=\"Sales\"]")).click();
 		WebElement element = driver.findElement(By.xpath("//span[@class='slds-truncate'][normalize-space()='Opportunities']"));
@@ -128,7 +128,7 @@ public class Anand {
 
 	}
 
-	@Test
+	@Test(priority=5)
 	public void TC5() throws InterruptedException {	
 		driver.findElement(By.xpath("//p[text()=\"Sales\"]")).click();
 		WebElement element = driver.findElement(By.xpath("//span[@class='slds-truncate'][normalize-space()='Opportunities']"));

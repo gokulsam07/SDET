@@ -39,6 +39,7 @@ public class Accounts_TC003 {
 		driver.executeScript("arguments[0].click();", accountTab);
 		driver.findElement(By.xpath("//a[normalize-space()='GokulAccount']/ancestor::tr/td[6]")).click();
 		driver.findElement(By.xpath("//a[@title='Delete']")).click();
+		driver.findElement(By.xpath("//button[@title='Delete']")).click();
 		Assert.assertEquals(true, driver.findElement(By.xpath("//div[@aria-label='Success']")).isDisplayed());
 		driver.quit();
 	}
