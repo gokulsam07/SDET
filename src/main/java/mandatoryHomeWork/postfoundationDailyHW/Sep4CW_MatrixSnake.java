@@ -35,18 +35,18 @@ public class Sep4CW_MatrixSnake {
 
 
 
-@Test
-public void test1() {
-	int[][] mat = {{1,2},{3,4}};
-	int[] res = {1,2,4,3};
-	Assert.assertEquals(res, printMatrix(mat));
-}
+	@Test
+	public void test1() {
+		int[][] mat = {{1,2},{3,4}};
+		int[] res = {1,2,4,3};
+		Assert.assertEquals(res, printMatrix(mat));
+	}
 
-@Test
-public void test2() {
-	int[][] mat = {{1,2,3},{4,5,6},{7,8,9}};
-	int[] res = {1,2,3,6,5,4,7,8,9};
-	Assert.assertEquals(res, printMatrix(mat));
-}
+	@Test
+	public void test2() {
+		int[][] mat = {{1,2,3},{4,5,6},{7,8,9}};
+		int[] res = {1,2,3,6,5,4,7,8,9};
+		Assert.assertEquals(res, printMatrix(mat));
+	}
 
 }
