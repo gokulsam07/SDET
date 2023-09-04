@@ -60,6 +60,7 @@ public class Sept4CW_FindDuplicate {
 		al.add(2);
 		al.add(4);
 		al.add(4);
+		al.add(4);
 		Assert.assertEquals(4, findDuplicate(al, 0));
 	}
 
