@@ -31,7 +31,7 @@ public class Accounts_TC003 {
 
 		WebElement viewAll = driver.findElement(By.xpath("//button[normalize-space()='View All']"));
 		viewAll.click();
-
+ 
 		driver.findElement(By.xpath("//input[@placeholder='Search apps or items...']")).sendKeys("Sales");
 		driver.findElement(By.xpath("(//mark[text()='Sales'])[3]")).click();
 		WebElement accountTab = driver.findElement(By.xpath("//span[normalize-space()='Accounts']"));
