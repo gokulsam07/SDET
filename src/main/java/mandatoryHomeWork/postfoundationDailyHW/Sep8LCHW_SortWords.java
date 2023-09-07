@@ -35,7 +35,7 @@ public class Sep8LCHW_SortWords {
 
 	@Test
 	public void test2() {
-		Assert.assertEquals("Hey how are you",sortSentence("Hey1 are3 you4 how2"));
+		Assert.assertEquals("Hey how are you?",sortSentence("Hey1 are3 you?4 how2"));
 	}
 	
 	@Test
