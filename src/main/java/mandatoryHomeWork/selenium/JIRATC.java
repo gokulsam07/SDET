@@ -13,7 +13,7 @@ public class JIRATC {
 	String name ="Automation JIRA - Gokul1";
 
 	@Test
-	public void JIRABacklog() {
+	public void jiraBacklog() {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
