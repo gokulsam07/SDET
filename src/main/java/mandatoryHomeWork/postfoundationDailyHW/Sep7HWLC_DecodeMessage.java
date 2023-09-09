@@ -1,8 +1,9 @@
 package mandatoryHomeWork.postfoundationDailyHW;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.LinkedHashSet;
 
-import org.junit.Test;
 import org.testng.Assert;
 
 public class Sep7HWLC_DecodeMessage {
@@ -12,7 +13,7 @@ public class Sep7HWLC_DecodeMessage {
 	//Logic
 	//1. Create a normal string a-z; create a resultant char[] of size that equals the message
 	//2. Initialize a string builder, check if the length of key is > length of normal, if yes, iterate it in a for loop to remove duplicate & ' ' to append in string builder
-	//3. check if the length of key is > length of normal, if yes pass the value of sb to create string res, else pass key to res
+	//3.check if the length of key is > length of normal, if yes pass the value of sb to create string res, else pass key to res
 	
 	//Main logic
 	//1. Iterate a for loop for message till last index
@@ -61,12 +62,12 @@ public class Sep7HWLC_DecodeMessage {
 
 	@Test
 	public void test1() {
-		Assert.assertEquals("the five boxing wizards jump quickly", decodeMessage("eljuxhpwnyrdgtqkviszcfmabo","zwx hnfx lqantp mnoeius ycgk vcnjrdb"));
+		AssertJUnit.assertEquals("the five boxing wizards jump quickly", decodeMessage("eljuxhpwnyrdgtqkviszcfmabo","zwx hnfx lqantp mnoeius ycgk vcnjrdb"));
 	}
 
 	@Test
 	public void test2() {
-		Assert.assertEquals("this is a secret", decodeMessage("the quick brown fox jumps over the lazy dog","vkbs bs t suepuv"));
+		AssertJUnit.assertEquals("this is a secret", decodeMessage("the quick brown fox jumps over the lazy dog","vkbs bs t suepuv"));
 	}
 
 
