@@ -3,7 +3,7 @@ package mandatoryHomeWork.postfoundationDailyHW;
 import org.junit.Test;
 import org.testng.Assert;
 
-public class Sep13LCHW_NoOfLinesOfString {
+public class Sep12LCHW_NoOfLinesOfString {
 
 	//ip : int[], string
 	//op :int[] 
