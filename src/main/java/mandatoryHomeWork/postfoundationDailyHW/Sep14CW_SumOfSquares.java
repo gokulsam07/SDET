@@ -7,7 +7,7 @@ public class Sep14CW_SumOfSquares {
 	//ip : int[]
 	//op : int
 	//Logic
-	//1. Run all the elements of int[] from index 1
+	//1. Run for loop from  1 to n
 	//2. check if n%i==0, if yes square nums[i-1] and add it to total
 	//return total
 	//Time complexity - O[N] - n length of array
