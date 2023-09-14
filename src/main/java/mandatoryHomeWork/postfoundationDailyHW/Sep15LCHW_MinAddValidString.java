@@ -3,7 +3,7 @@ package mandatoryHomeWork.postfoundationDailyHW;
 import org.junit.Test;
 import org.testng.Assert;
 
-public class Sep14LCHW_MinAddValidString {
+public class Sep15LCHW_MinAddValidString {
 	
 	//ip : String
 	//op: int
