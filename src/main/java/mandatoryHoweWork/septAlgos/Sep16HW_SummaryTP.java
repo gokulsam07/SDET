@@ -1,4 +1,4 @@
-package mandatoryHoweWork.twoPointerAlgo;
+package mandatoryHoweWork.septAlgos;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package mandatoryHoweWork.twoPointerAlgo;
+package mandatoryHoweWork.septAlgos;
 
 public class Sep16ReverseTwoPointers {
 

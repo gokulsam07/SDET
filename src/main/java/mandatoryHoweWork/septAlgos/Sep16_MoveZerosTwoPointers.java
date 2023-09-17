@@ -1,4 +1,4 @@
-package mandatoryHoweWork.twoPointerAlgo;
+package mandatoryHoweWork.septAlgos;
 
 import org.junit.Test;
 import org.testng.Assert;
