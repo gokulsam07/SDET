@@ -58,7 +58,7 @@ public class Sep17_SlidingWindowMaxConsecutive {
 
 	@Test
 	public void test1() {
-		Assert.assertEquals(12, maxCons(new int[] {1,5,2,3,7,1},3));
+		Assert.assertEquals(10, maxCons(new int[] {1,5,2,3,7,1},2));
 	}
 
 	@Test
