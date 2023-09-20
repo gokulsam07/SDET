@@ -19,7 +19,7 @@ public class Sep20CW_MarryAlgo {
 
 	//return flag?"YES":"NO";
 
-	//Time complexity -- O[N] -- N - larger length string length
+	//Time complexity -- O[N3] -- N - larger length string length
 
 	public String isEligible(String man, String woman) {
 		boolean flag = false;
@@ -43,11 +43,11 @@ public class Sep20CW_MarryAlgo {
 				else {
 					sbw.insert(i,woman.charAt(i));
 				}
-				
+
 			}
 		}
-		
-		
+
+
 		if(w<m) {
 			for (int i = 0; i < m; i++) {
 				sbm.deleteCharAt(i);
@@ -58,14 +58,14 @@ public class Sep20CW_MarryAlgo {
 				else {
 					sbm.insert(i,man.charAt(i));
 				}
-				
+
 			}
 		}
 		return (flag)? "YES":"NO";
 	}
-	
-	
-	
+
+
+
 	@Test
 	public void test1() {
 		Assert.assertEquals("YES", isEligible("john","johanna"));
@@ -80,12 +80,12 @@ public class Sep20CW_MarryAlgo {
 	public void test3() {
 		Assert.assertEquals("NO", isEligible("kayla","jayla"));
 	}
-	
+
 	@Test
 	public void test4() {
 		Assert.assertEquals("YES", isEligible("meiyan","yan"));
 	}
-	
+
 	@Test
 	public void test5() {
 		Assert.assertEquals("YES", isEligible("priyan","priya"));
