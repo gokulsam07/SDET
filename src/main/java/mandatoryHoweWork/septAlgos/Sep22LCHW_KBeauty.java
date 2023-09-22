@@ -11,7 +11,7 @@ public class Sep22LCHW_KBeauty {
 	//2. Take substring from i to i+k and convert to int
 	//3. if the num !=0 && the num/sub has no remainder, inc beauty by 1
 	// return beauty
-	//Time complexity - O[N2]
+	//Time complexity - O[N*M] -- n len of given num, m for substring time
 
 	public int divisorSubstrings(int num, int k) {
 		int beauty=0;
