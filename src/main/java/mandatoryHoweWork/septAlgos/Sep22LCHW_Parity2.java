@@ -7,27 +7,32 @@ public class Sep22LCHW_Parity2 {
 	//ip : int[]
 	//op : int[]
 	//Logic
-	//1. Init pointer i=0; k=nums.length-1
-	//2. Run a for loop for all elements, if the element and index is even, assign the element to nums[j] and inc j by 2
-	//3. else if, the num is odd & i+1<num.length, swap i and i+1
+	//1. Init pointer i=0; j=1;
+	//2. Run a while lopp till i & j is less than arr length
+	//if the even index has even num, inc index of i by 2
+	//if the odd index has odd num, inc index of j by 2
+	// 3. In all other scenarios, swap the number in odd and even positions
 	//return nums
 
 	//Time complexity - O[N]
 
 	public int[] sortArrayByParity(int[] nums) {
-		int j=0;
-		int k=nums.length-1;
-		for(int i=0;i<nums.length;i++){
-			if(nums[i]%2==0&&i%2==0){
-				nums[j]=nums[i];
-				j=j+2;
-			}
-			else if (i+1<nums.length&&i%2!=0 ||i+1<nums.length&&nums[i]%2!=0 ){
-				int temp=nums[i];
-				nums[i]=nums[i+1];
-				nums[i+1]=temp;
+		int i = 0;
+		int j = 1;
+
+
+		while (i < nums.length && j < nums.length) {
+			if (nums[i] % 2 == 0) {
+				i += 2;
+			} else if (nums[j] % 2 != 0) {
+				j += 2;
+			} else {
+				int temp = nums[i];
+				nums[i] = nums[j];
+				nums[j] = temp;
 			}
 		}
+
 		return nums;
 	}
 
