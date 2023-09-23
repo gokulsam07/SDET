@@ -1,4 +1,4 @@
-package mandatoryHoweWork.septAlgos;
+package mandatoryHoweWork.septWeek3Algos;
 import org.junit.Test;
 import org.testng.Assert;
 
