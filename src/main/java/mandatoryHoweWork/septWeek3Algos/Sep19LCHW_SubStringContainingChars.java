@@ -12,7 +12,7 @@ public class Sep19LCHW_SubStringContainingChars {
 	//2. RUn a while loop inside for to run when all the three char's freq is >0
 	//3. add s.length()-i to count
 	//4. reduce the frequency of the calculated chat and move the left pointer to next char -- to take further substrings
-	//Time complexity -- O[N2]
+	//Time complexity -- O[N]
 
 	public int subString(String s) {
 		int[] freq = new int[3];
