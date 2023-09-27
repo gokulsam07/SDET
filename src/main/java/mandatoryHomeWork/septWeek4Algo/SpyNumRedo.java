@@ -13,6 +13,8 @@ public class SpyNumRedo {
 	//2. perform sum and pdt on each digit 
 	// check the pdft and sum to return boolean
 	
+	//TC -O[N], SC - O[k]
+	
 	public boolean checkSpy(int num) {
 		int pdt=1;
 		int sum=0;
