@@ -1,4 +1,4 @@
-package mandatoryHoweWork.septWeek3Algos;
+package mandatoryHomeWork.septWeek3Algos;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package mandatoryHoweWork.septWeek3Algos;
+package mandatoryHomeWork.septWeek3Algos;
 
 public class Sep16ReverseTwoPointers {
 
