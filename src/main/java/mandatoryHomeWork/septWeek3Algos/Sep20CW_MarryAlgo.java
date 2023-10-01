@@ -27,11 +27,10 @@ public class Sep20CW_MarryAlgo {
 		StringBuilder sbw = new StringBuilder(woman);
 		int m =man.length();
 		int w =woman.length();
-		if(m==w) {
 			if(man.equals(woman)) {
 				flag=true;
 			}
-		}
+
 
 		if(m<w) {
 			for (int i = 0; i < w; i++) {

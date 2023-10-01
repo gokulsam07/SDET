@@ -60,18 +60,13 @@ public class ConstructionPossibility {
 			return true;
 		}
 	 
-	 public boolean canConstruct3(String ransomNote, String magazine) {
+	 public boolean canConstruct(String ransomNote, String magazine) {
 		 if(ransomNote.length()>magazine.length()) return false;
 		 ConcurrentHashMap<Character, Integer> cMap = new ConcurrentHashMap<Character, Integer>();
 		 for (int i = 0; i < magazine.length(); i++) {
-				char c1 = magazine.charAt(i);
-				char c2=' ';
+				cMap.put(magazine.charAt(i), cMap.getOrDefault(magazine.charAt(i), 0) + 1);
 				if(i<ransomNote.length()) {
-					c2=ransomNote.charAt(i);
-				}
-				cMap.put(c1, cMap.getOrDefault(c1, 0) + 1);
-				if(i<ransomNote.length()) {
-					cMap.put(c2, cMap.getOrDefault(c2, 0) - 1);
+					cMap.put(ransomNote.charAt(i), cMap.getOrDefault(ransomNote.charAt(i), 0) - 1);
 				}
 			}
 		 for(int i=0;i<ransomNote.length();i++) {
@@ -84,7 +79,7 @@ public class ConstructionPossibility {
 	 
 	 
 	 //brute force
-	 public boolean canConstruct(String ransomNote, String magazine) {
+	 public boolean canConstruct3(String ransomNote, String magazine) {
 		 if (ransomNote.length() > magazine.length()) return false;
 
 	        StringBuilder sb = new StringBuilder(magazine);

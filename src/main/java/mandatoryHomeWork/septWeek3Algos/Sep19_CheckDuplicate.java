@@ -45,10 +45,9 @@ public class Sep19_CheckDuplicate {
 
 		for (int i = 0; i < nums.length; i++)
 		{
-			if (window.contains(nums[i])) { 
+			if (!window.add(nums[i])) { 
 				op.add(nums[i]);
 			}
-			window.add(nums[i]);
 			if (i >= k) {
 				window.remove(nums[i - k]);
 			}
