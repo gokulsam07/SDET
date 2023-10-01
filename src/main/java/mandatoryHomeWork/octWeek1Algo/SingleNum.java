@@ -13,9 +13,6 @@ public class SingleNum {
 	           if(!s.add(i)){
 	                 s.remove(i);
 	             }
-	             else{
-	                 s.add(i);
-	             }
 	         }
 	       return s.iterator().next();
 		}
