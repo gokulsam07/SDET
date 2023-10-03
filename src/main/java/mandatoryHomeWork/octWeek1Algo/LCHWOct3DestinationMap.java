@@ -12,9 +12,9 @@ public class LCHWOct3DestinationMap {
 
 	//ip: List<List<String>>
 	//op : String
-	//Logic : init two set
-	//1. Add all the start to one set and end to another set
-	//2. Run a for loop to check if there is any value present in key set which is not there in value set using add method, if yes return it
+	//Logic : init set
+	//1. Add all the start to  set
+	//2. add the dest to the same set, which value returns bool true is the dest, return that
 	//return ""
 	//TC : O[N], SC: O[2N]
 
