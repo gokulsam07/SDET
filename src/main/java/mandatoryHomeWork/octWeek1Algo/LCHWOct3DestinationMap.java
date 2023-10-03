@@ -16,7 +16,7 @@ public class LCHWOct3DestinationMap {
 	//1. Add all the start to  set
 	//2. add the dest to the same set, which value returns bool true is the dest, return that
 	//return ""
-	//TC : O[N], SC: O[2N]
+	//TC : O[N], SC: O[N]
 
 	public String findDestination(List<List<String>> paths) {
 		Set<String> keys = new HashSet<>(); 
