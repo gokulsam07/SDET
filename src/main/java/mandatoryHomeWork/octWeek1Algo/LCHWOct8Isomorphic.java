@@ -1,4 +1,4 @@
-package mandatoryHomeWork.septWeek4Algo;
+package mandatoryHomeWork.octWeek1Algo;
 import java.util.HashMap;
 import java.util.Map;
 
