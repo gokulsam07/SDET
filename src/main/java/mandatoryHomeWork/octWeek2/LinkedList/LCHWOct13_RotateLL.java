@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class LCHWOct12_RotateLL {
+public class LCHWOct13_RotateLL {
 	
 	//ip & op :LL
 	//Logic - if head, head next is null or no rotation needed return the LL as is
