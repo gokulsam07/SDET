@@ -1,10 +1,12 @@
 package mandatoryHomeWork.octWeek3;
 
+import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Queue;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -49,24 +51,42 @@ public class LCHWOct16_UniqueCharIndex {
 			}
 			return (c!=' ')?s.indexOf(c):-1;
 	    }
+	//ip : String, op: int
+		//Logic Init HM of char , int
+		//Iterate all elements and add to queue and inc the freq of char
+		// Run a while loop to remove head until the char becomes unique using freq
+		// if dq empty -1, else take the head & find index of head
+		//SC:O[N]; TC: O[N]
 	
 	
-//https://leetcode.com/problems/first-unique-character-in-a-string/solutions/3926582/java-sol-n-using-1-queue/
+	public int firstUniqChar(String s) {
+        int freq[] = new int[26];
+       Queue<Character> dq = new ArrayDeque<>();
+       for(int i=0;i<s.length();i++){
+           char ch =s.charAt(i);
+           freq[ch-'a']++;
+           dq.offer(ch);
+          while (!dq.isEmpty()&&freq[dq.peek()-'a']>1){
+               dq.poll();
+           }
+       }
+      return (dq.isEmpty())? -1:s.indexOf(dq.poll());
+   }
 	@Test
 	public void test() {
-		Assert.assertEquals(0, firstUniqChar2("baaapu"));
+		Assert.assertEquals(0, firstUniqChar("baaapu"));
 	}
 	@Test
 	public void test1() {
-		Assert.assertEquals(4, firstUniqChar2("aappkiimaan"));
+		Assert.assertEquals(4, firstUniqChar("aappkiimaan"));
 	}
 	@Test
 	public void test2() {
-		Assert.assertEquals(-1, firstUniqChar2("dimmid"));
+		Assert.assertEquals(-1, firstUniqChar("dimmid"));
 	}
 	@Test
 	public void test3() {
-		Assert.assertEquals(0, firstUniqChar2("dimwit"));
+		Assert.assertEquals(0, firstUniqChar("dimwit"));
 	}
 
 }
