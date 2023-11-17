@@ -11,7 +11,7 @@ public class CW_GoodPairs {
 	// Loop thru all elements using two for loops with inner for loop starting from next index of first for loop
 	// when the nums[i]==nums[j] inc count
 	//return count
-	//TC:O[N2], SC:O[N]
+	//TC:O[N2], SC:O[k]
 	 public int numIdenticalPairs(int[] nums) {
          int count=0;
      for(int i=0;i<nums.length;i++){
