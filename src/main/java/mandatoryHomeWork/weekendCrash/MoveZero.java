@@ -1,4 +1,4 @@
-package mandatoryHomeWork.novWeek3;
+package mandatoryHomeWork.weekendCrash;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
