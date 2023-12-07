@@ -71,6 +71,20 @@
 			<version>4.13.2</version>
 			<scope>compile</scope>
 		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.15.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.sukgu/automation -->
+		<dependency>
+			<groupId>io.github.sukgu</groupId>
+			<artifactId>automation</artifactId>
+			<version>0.1.4.1</version>
+		</dependency>
+
 
 	</dependencies>
 </project>
