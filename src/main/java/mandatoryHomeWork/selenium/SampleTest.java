@@ -31,7 +31,7 @@ public class SampleTest {
 		((JavascriptExecutor) shadowRoot).executeScript("return arguments[0].querySelector('span[role='checkbox']')", shadowRoot);
 		// WebElement shadowCheckbox = shadowContext.querySelector("span[role='checkbox']");
 		//WebElement shadowCheckbox = (WebElement) jsExecutor.executeScript("return arguments[0].querySelector('span[role=\"checkbox\"]')", shadowRoot);
-		if (shadowContent.getAttribute("aria-checked").equals("false")) {
+	//	if (shadowContent.getAttribute("aria-checked").equals("false")) {
 			JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		    jsExecutor.executeScript("arguments[0].click();", shadowHost);
 		    System.out.println("Element selected");
@@ -50,4 +50,3 @@ public class SampleTest {
 		
 	}
 
-}
